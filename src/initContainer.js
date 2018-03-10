@@ -1,7 +1,7 @@
 const BeerContainer = require('./beerContainer');
-const data = require('../mockData/data');
+const mockData = require('../mockData/mockData');
 
-const beerContainerInitData = data.getBeerContainerData();
+const beerContainerInitData = mockData.getBeerContainerData();
 const initializeContainer = () => {
 	let containers = [];
 	for (const[key, value] of Object.entries(beerContainerInitData)){

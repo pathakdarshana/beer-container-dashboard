@@ -4,14 +4,21 @@ const colors = require('colors');
 const displayContainerInformation = (stats) => {
 	let data =[];
 	for (const[key, value] of Object.entries(stats)){
-		let status = ( value.isWithinRange == true) ? 'Normal'.blue : 'Alert!'.bold.red; 
 		data.push({ 
-			ContainerNumber : key.underline.green, 
-			CurrentTemperature : `${value.currentTemperature.toString()} °C`.yellow,
-			Status: status 
+			'Container #' : key.underline.green, 
+			CurrentTemperature : degreeCelcius(value.currentTemperature),
+			Status: statusMessage(value.isWithinRange) 
 		});
 	}
 	console.table(data);
+}
+
+const degreeCelcius = (temperature) => {
+	return `${temperature.toString()} °C`.yellow;
+}
+
+const statusMessage = (isWithinRange) => {
+	return isWithinRange == true ? 'Normal'.blue : 'Alert!'.bold.red;
 }
 
 module.exports = displayContainerInformation;

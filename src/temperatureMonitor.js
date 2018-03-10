@@ -1,7 +1,7 @@
 const temperatureSensor = require('./temperatureSensor');
-const data = require('../mockData/data');
+const mockData = require('../mockData/mockData');
 
-const beerData = data.getBeerData();
+const beerData = mockData.getBeerData();
 
 const temperatureMonitor = (containers) =>{
 
