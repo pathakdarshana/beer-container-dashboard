@@ -19,7 +19,7 @@ We assume that:
 ## Logic
 ### Initialization
   - It a process of loading of containers in truck with a set temperature.
-  - The process is done through `src/initContainer.js`. It loads data from `mockData/beerContainer.json` and creates various instances of container.
+  - The process is done through `src/initContainer.js`. It loads data from `src/mockData/beerContainer.json` and creates various instances of container.
   - Sample data for initialization process:
   ```
   {
@@ -40,7 +40,7 @@ We assume that:
   - The temperature given by the sensor of a container is compared against the desirable range of beer stored in it.
   - If current temperature is within the desirable range status is set to `Normal`.
   - If current temperature is out of the desirable range status is set to `Alert!`.
-  - The desirable range of temperature of all beers is maintained in file : `mockData/beer.json`
+  - The desirable range of temperature of all beers is maintained in file : `src/mockData/beer.json`
   - Sample data for beer temperature range:
   ```
   {
