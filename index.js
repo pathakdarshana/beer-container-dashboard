@@ -1,6 +1,11 @@
+const sleep = require('sleep');
 const containers = require('./src/initContainer');
 const allContainers = containers.initializeContainer();
+const temperatureMonitor = require('./src/temperatureMonitor');
+const dashboard = require('./src/dashboard');
 
-for (let i = 0; i < allContainers.length; i++){
-	console.log(`${allContainers[i].id} ${allContainers[i].initialTemperature}C ${allContainers[i].beerType}`);
+while(true){
+	const stats = temperatureMonitor(allContainers);
+	dashboard(stats);
+	sleep.sleep(5);
 }
