@@ -1,5 +1,5 @@
 const BeerContainer = require('./beerContainer');
-const mockData = require('../mockData/mockData');
+const mockData = require('./mockData/mockData');
 
 const beerContainerInitData = mockData.getBeerContainerData();
 const initializeContainer = () => {

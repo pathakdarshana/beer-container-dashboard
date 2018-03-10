@@ -1,4 +1,4 @@
-const mockData = require('../mockData/mockData');
+const mockData = require('./mockData/mockData');
 
 const beerData = mockData.getBeerData();
 
