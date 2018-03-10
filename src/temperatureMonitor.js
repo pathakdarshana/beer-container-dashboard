@@ -1,22 +1,23 @@
+const beerTemperatureRange = require('./beer');
 const temperatureSensor = require('./temperatureSensor');
-const mockData = require('../mockData/mockData');
-
-const beerData = mockData.getBeerData();
 
 const temperatureMonitor = (containers) =>{
-
 	let stats = {};
 	for (let i = 0; i < containers.length; i++){
 		let container = containers[i].id;
-		let lower = beerData[containers[i].beerType]['temperatureRange']['lower'];
-		let upper = beerData[containers[i].beerType]['temperatureRange']['upper'];
-		let currentTemperature = temperatureSensor();
-		stats[container] = {
-			currentTemperature: currentTemperature,
-			isWithinRange: isWithinRange(lower,upper,currentTemperature)
-		};
+		stats[container] = getContainerStat(containers[i]);
 	}
 	return stats;
+}
+
+const getContainerStat = (container) => {
+	let range = beerTemperatureRange(container.beerType);
+	let currentTemperature = temperatureSensor();
+
+	return {
+		currentTemperature: currentTemperature,
+		isWithinRange: isWithinRange(range.lower,range.upper,currentTemperature)
+	}
 }
 
 const isWithinRange = (lower,upper,currentTemperature) => {
