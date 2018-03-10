@@ -3,9 +3,10 @@ const containers = require('./src/initContainer');
 const allContainers = containers.initializeContainer();
 const temperatureMonitor = require('./src/temperatureMonitor');
 const dashboard = require('./src/dashboard');
+const interval = require('./config.json');
 
 while(true){
 	const stats = temperatureMonitor(allContainers);
 	dashboard(stats);
-	sleep.sleep(5);
+	sleep.sleep(interval['refreshInterval']);
 }
