@@ -26,5 +26,9 @@
 	"Container7" : {
 		"initialTemperature" : 7,
 		"beerType" : "beer4"
+	},
+	"Container8" : {
+		"initialTemperature" : 4,
+		"beerType" : "beer3"
 	}
 }
