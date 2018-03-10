@@ -1,6 +1,6 @@
 # beerContainerDashboard
 Dashboards for delivery trucks to monitor temperature of beer containers.
-
+![Screenshot of Dashboard](beerDashboard.png?raw=true "Title")
 ## Purpose of App
 To show driver current temperature of beer containers and alert if temperature falls out of range
 
