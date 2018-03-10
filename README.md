@@ -4,15 +4,23 @@ Dashboards for delivery trucks to monitor temperature of beer containers.
 ## Purpose of App
 To show driver current temperature of beer containers and alert if temperature falls out of range
 
+## Steps to run
+ - Required Node version: **8.9.4**
+```
+git clone https://github.com/pathakdarshana/beerContainerDashboard.git
+cd beerContainerDashboard
+npm install
+npm start
+```
 ## Assumption
 We assume that:
-  - A container has only one type of beer.
+  - One container has only one type of beer.
 
 ## Logic
 ### Initialization
   - It a process of loading of containers in truck with a set temperature.
   - The process is done through `src/initContainer.js`. It loads data from `mockData/beerContainer.json` and creates various instances of container.
-  - Sample data for initialization process
+  - Sample data for initialization process:
   ```
   {
      "Container1" : {
@@ -33,6 +41,17 @@ We assume that:
   - If current temperature is within the desirable range status is set to `Normal`.
   - If current temperature is out of the desirable range status is set to `Alert!`.
   - The desirable range of temperature of all beers is maintained in file : `mockData/beer.json`
+  - Sample data for beer temperature range:
+  ```
+  {
+    "beer1":{
+      "temperatureRange":{
+        "lower": 4,
+        "upper": 6
+      }
+    }
+  }
+  ```
 ### Dashboard
   - The dashboard is shown in the `terminal` only, it has no web page or UI.
   - Current temperature of containers and status `Normal or Alert!` is displayed for all containers in a tabular format.
