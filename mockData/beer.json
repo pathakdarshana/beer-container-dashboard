@@ -1,0 +1,33 @@
+{
+	"beer1":{
+		"temperatureRange":{
+			"lower": 4,
+			"upper": 6
+		}
+	},
+	"beer2":{
+		"temperatureRange":{
+			"lower": 5,
+			"upper": 6
+		}
+	},
+	"beer3":{
+		"temperatureRange":{
+			"lower": 4,
+			"upper": 7
+		}
+	},
+	"beer4":{
+		"temperatureRange":{
+			"lower": 6,
+			"upper": 8
+		}
+	},
+	"beer5":{
+		"temperatureRange":{
+			"lower": 3,
+			"upper": 5
+		}
+	},
+
+}
