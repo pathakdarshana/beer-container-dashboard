@@ -8,7 +8,7 @@ class TemperatureSensor {
 
 	getCurrentTemperature(){
 		if(this.needTemperatureUpdate()){
-			this.updateCurrentTemperature();
+			this.currentTemperature = this.updatedCurrentTemperature();
 		}
 		return this.currentTemperature;
  	}
@@ -19,10 +19,10 @@ class TemperatureSensor {
 	 	return ((elapsedSeconds % interval === 0) && elapsedSeconds != 0) ? true : false;
  	}
 
- 	updateCurrentTemperature(){
+ 	updatedCurrentTemperature(){
  		const min = config.temperatureSensor.range.min;
 		const max = config.temperatureSensor.range.max;
-		this.currentTemperature =  Math.floor(Math.random() * (max - min +1)) + min;
+		return Math.floor(Math.random() * (max - min +1)) + min;
  	}
 }
 
