@@ -24,4 +24,4 @@ const isWithinRange = (lower,upper,currentTemperature) => {
 	return (currentTemperature >= lower && currentTemperature <= upper) ? true : false
 }
 
-module.exports = temperatureMonitor;
+module.exports = {temperatureMonitor, isWithinRange};

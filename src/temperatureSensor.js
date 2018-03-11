@@ -3,7 +3,7 @@ const startTime = Date.now();
 
 class TemperatureSensor {
 	constructor(initialTemperature){
-		this.currentTemperature = initialTemperature
+		this.currentTemperature = initialTemperature;
 	}
 
 	getCurrentTemperature(){
@@ -14,7 +14,7 @@ class TemperatureSensor {
  	}
 
  	needTemperatureUpdate(){
- 		let interval = config.temperatureSensor.checkInterval
+ 		let interval = config.temperatureSensor.checkInterval;
  		let elapsedSeconds = Math.floor((Date.now() - startTime)/1000);
 	 	return ((elapsedSeconds % interval === 0) && elapsedSeconds != 0) ? true : false;
  	}
