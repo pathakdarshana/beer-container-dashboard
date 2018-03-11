@@ -12,7 +12,7 @@ const temperatureMonitor = (containers) =>{
 
 const getContainerStat = (container) => {
 	let range = beerTemperatureRange(container.beerType);
-	let currentTemperature = temperatureSensor();
+	let currentTemperature = container.getCurrentTemperature();
 
 	return {
 		currentTemperature: currentTemperature,

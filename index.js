@@ -8,5 +8,5 @@ const interval = require('./config.json');
 while(true){
 	const stats = temperatureMonitor(allContainers);
 	dashboard(stats);
-	sleep.sleep(interval['refreshInterval']);
+	sleep.sleep(interval['dashboardRefreshInterval']);
 }

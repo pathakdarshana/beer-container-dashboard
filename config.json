@@ -1,3 +1,10 @@
 {
-	"refreshInterval": 5
+	"dashboardRefreshInterval": 5,
+	"temperatureSensor": {
+		"range": {
+			"min": 2,
+			"max": 10
+		},
+		"checkInterval": 10
+	} 
 }
