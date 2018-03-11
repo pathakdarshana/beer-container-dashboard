@@ -21,4 +21,4 @@ const statusMessage = (isWithinRange) => {
 	return isWithinRange == true ? 'Normal'.blue : 'Alert!'.bold.red;
 }
 
-module.exports = displayContainerInformation;
+module.exports = {displayContainerInformation, degreeCelcius, statusMessage};
