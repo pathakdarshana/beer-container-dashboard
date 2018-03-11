@@ -1,5 +1,5 @@
 const sleep = require('sleep');
-const containers = require('./src/initContainer');
+const containers = require('./src/container.initializer');
 const monitor = require('./src/temperatureMonitor');
 const dashboard = require('./src/dashboard');
 const interval = require('./config.json');
