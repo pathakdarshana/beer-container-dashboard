@@ -1,16 +1,24 @@
-# beerContainerDashboard
+# Beer Container Dashboard
 Dashboards for delivery trucks to monitor temperature of beer containers.
 ![Screenshot of Dashboard](beerDashboard.png?raw=true "Title")
 ## Purpose of App
 To show driver current temperature of beer containers and alert if temperature falls out of range
 
-## Steps to run
+## Steps to execute
  - Required Node version: **8.9.4**
+ ### Run application
 ```
 git clone https://github.com/pathakdarshana/beerContainerDashboard.git
 cd beerContainerDashboard
 npm install
 npm start
+```
+### Run tests
+```
+git clone https://github.com/pathakdarshana/beerContainerDashboard.git
+cd beerContainerDashboard
+npm install
+npm test
 ```
 ## Assumption
 We assume that:
