@@ -72,6 +72,19 @@ We assume that:
   - **Colour coding:**
     - `Normal` -> Blue
     - `Alert!` -> Bold and Red
+### Note: 
+  - To closely simulate the behaviour of a real temperature Sensor, a condition has been put on the time period when `temperature Sensor` generates new temperature.
+  - `checkInterval` and `dashboardRefreshInterval` in `config.json` should follow conditions given below:
+    - `checkInterval` is a multiple of `dashboardRefreshInterval`.
+    - Interval should be `integer`.
+    - **Example:**
+    ```
+     dashboardRefreshInterval   checkInterval
+     -------------------------   -------------
+          5                         10         
+          2                          8
+          5                         15
+    ```
     
 ### Possible Improvements
   - **User interface :**
