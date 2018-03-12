@@ -42,8 +42,10 @@ We assume that:
    }
   ```
 ### Temperature sensor
-  - As there is no real source for getting current temperature from container's temperature sensor the temeperature data  is generated randomly using a function.
+  - As there is no real source for getting current temperature from container's temperature sensor so temeperature data  is generated randomly using a function.
+  - **Range configuration:** To make the logic dynamic temperature randomizer generates temperature in a range configurable through `config.js`.  
   - The function is performed by `src/temperatureSensor.js`.
+  
 ### Monitoring
   - The temperature given by the sensor of a container is compared against the desirable range of beer stored in it.
   - If current temperature is within the desirable range status is set to `Normal`.
@@ -63,7 +65,23 @@ We assume that:
 ### Dashboard
   - The dashboard is shown in the `terminal` only, it has no web page or UI.
   - Current temperature of containers and status `Normal or Alert!` is displayed for all containers in a tabular format.
-  - Dashboard is refreshed after every 5 seconds.
-  - Colour coding:
+  - It has an `event emitter` in it which is triggred if the temperature of container goes out of range and notifies. 
+  - **Refresh Interval:** 
+    - Dashboard is refreshed after every 5 seconds.
+    - It can be configured through `config.js`
+  - **Colour coding:**
     - `Normal` -> Blue
     - `Alert!` -> Bold and Red
+    
+### Possible Improvements
+  - **User interface :**
+      - Customizable color, fonts.
+      - Interactive.
+      - Responsive
+  - **Notification system:**
+      - Adding acknowledgement system.
+      - Making it audible.
+      - Escalation system can be added.
+  - Decouple logic and UI by making API.
+  - Add capability to monitor remotely.
+  
