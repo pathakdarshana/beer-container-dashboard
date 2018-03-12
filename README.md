@@ -43,7 +43,7 @@ We assume that:
   ```
 ### Temperature sensor
   - As there is no real source for getting current temperature from container's temperature sensor so temeperature data  is generated randomly using a function.
-  - **Range configuration:** To make the logic dynamic temperature randomizer generates temperature in a range configurable through `config.js`.  
+  - **Range configuration:** To make the logic dynamic temperature randomizer generates temperature in a range configurable through `config.json`.  
   - The function is performed by `src/temperatureSensor.js`.
   
 ### Monitoring
@@ -68,7 +68,7 @@ We assume that:
   - It has an `event emitter` in it which is triggred if the temperature of container goes out of range and notifies. 
   - **Refresh Interval:** 
     - Dashboard is refreshed after every 5 seconds.
-    - It can be configured through `config.js`
+    - It can be configured through `config.json`
   - **Colour coding:**
     - `Normal` -> Blue
     - `Alert!` -> Bold and Red
