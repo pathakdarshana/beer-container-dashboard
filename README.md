@@ -97,4 +97,5 @@ We assume that:
       - Escalation system can be added.
   - Decouple logic and UI by making API.
   - Add capability to monitor remotely.
+  - Integration with real temperature sensor data.
   
